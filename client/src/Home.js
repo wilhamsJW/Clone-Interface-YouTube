@@ -1,7 +1,17 @@
 import React from "react";
 
-import { makeStyles, AppBar, Box, Toolbar, Typography, Button, IconButton } from "@material-ui/core";
-import MenuIcon from '@mui/icons-material/Menu';
+import {
+  makeStyles,
+  AppBar,
+  Toolbar,
+  Button,
+  IconButton,
+} from "@material-ui/core";
+import MenuIcon from "@mui/icons-material/Menu";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import VideoCallIcon from '@mui/icons-material/VideoCall';
+import MoreVert from '@mui/icons-material/MoreVert';
+import AppsIcon from '@mui/icons-material/Apps';
 
 // A partir do momento que passamos o parametro theme no makeStyles conseguimos acessar as propriedades css da const theme q está no App.js
 // pq isso acontece? Pq no <ThemeProvider /> q está no App.js ele recebe a variavel com as propriedades do tema e repassa essa var para
@@ -12,10 +22,13 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
   },
   appBar: {
-    boxShadow: 'none'
+    boxShadow: "none",
   },
   grow: {
-    flexGrow: 1
+    flexGrow: 1,
+  },
+  icons: {
+    paddingRight: theme.spacing(2)
   }
 }));
 
@@ -23,8 +36,8 @@ function Home() {
   // Aqui estamos instanciando a const usestyles para podermos usar ela abaixo
   const classes = useStyles();
 
-  return ( 
-  <div className={classes.root}>
+  return (
+    <div className={classes.root}>
       <AppBar color="inherit" className={classes.appBar}>
         <Toolbar>
           <IconButton
@@ -36,12 +49,44 @@ function Home() {
           >
             <MenuIcon />
           </IconButton>
+
+          {/* Esta div está servindo para alinhar os dados do menu, para que fique uns do lado direito e outros esquerdo, veja como ela foi definida pela class */}
           <div className={classes.grow} />
-          <Button color="inherit">FAZER LOGIN</Button>
+
+          <IconButton
+            className={classes.icons}
+            size="large"
+            color="inherit"
+            sx={{ mr: 2 }}
+          >
+            <VideoCallIcon />
+          </IconButton>
+
+          <IconButton
+            className={classes.icons}
+            size="large"
+            color="inherit"
+            sx={{ mr: 2 }}
+          >
+            <AppsIcon />
+          </IconButton>
+
+          <IconButton
+            className={classes.icons}
+            size="large"
+            color="inherit"
+            sx={{ mr: 2 }}
+          >
+            <MoreVert />
+          </IconButton>
+
+          <Button startIcon={<AccountCircleIcon />} variant="outlined" color="inherit">
+            FAZER LOGIN
+          </Button>
         </Toolbar>
       </AppBar>
-  </div>
-  )
+    </div>
+  );
 }
 
 export default Home;
