@@ -29,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
   },
   icons: {
     paddingRight: theme.spacing(2)
+  },
+  menuIcon: {
+    paddingRight: theme.spacing(5),
+    paddingLeft: theme.spacing(4)
   }
 }));
 
@@ -41,6 +45,7 @@ function Home() {
       <AppBar color="inherit" className={classes.appBar}>
         <Toolbar>
           <IconButton
+           className={classes.menuIcon}
             size="large"
             edge="start"
             color="inherit"
