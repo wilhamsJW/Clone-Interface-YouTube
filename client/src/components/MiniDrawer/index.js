@@ -33,6 +33,8 @@ import HistoryIcon from '@mui/icons-material/History';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import HistoryToggleOffIcon from '@mui/icons-material/HistoryToggleOff';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import AddCircle from '@mui/icons-material/AddCircle';
+import ListSubheader from '@mui/material/ListSubheader';
 
 const drawerWidth = 240;
 
@@ -130,7 +132,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MiniDrawer() {
+function MiniDrawer() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -144,6 +146,7 @@ export default function MiniDrawer() {
 
   // Aqui estamos instanciando a const usestyles para podermos usar ela abaixo
   const classes = useStyles();
+  // const theme = useTheme();
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -312,7 +315,111 @@ export default function MiniDrawer() {
           </Box>
         </Box>
         <Divider />
-        
+
+        <List
+                component='nav'
+                aria-labelledby='nested-list-subheader'
+                subheader={
+                  <ListSubheader
+                    component='div'
+                    id='nested-list-subheader'
+                    className={classes.subheader}
+                  >
+                    O Melhor do youtube
+                  </ListSubheader>
+                }
+              >
+                <ListItem button classes={{ root: classes.listItem }}>
+                  <ListItemIcon>
+                    <AddCircle />
+                  </ListItemIcon>
+                  <ListItemText
+                    classes={{
+                      primary: classes.listItemText,
+                    }}
+                    primary={'Música'}
+                  />
+                </ListItem>
+                <ListItem button classes={{ root: classes.listItem }}>
+                  <ListItemIcon>
+                    <AddCircle />
+                  </ListItemIcon>
+                  <ListItemText
+                    classes={{
+                      primary: classes.listItemText,
+                    }}
+                    primary={'Esportes'}
+                  />
+                </ListItem>
+                <ListItem button classes={{ root: classes.listItem }}>
+                  <ListItemIcon>
+                    <AddCircle />
+                  </ListItemIcon>
+                  <ListItemText
+                    classes={{
+                      primary: classes.listItemText,
+                    }}
+                    primary={'Jogos'}
+                  />
+                </ListItem>
+                <ListItem button classes={{ root: classes.listItem }}>
+                  <ListItemIcon>
+                    <AddCircle />
+                  </ListItemIcon>
+                  <ListItemText
+                    classes={{
+                      primary: classes.listItemText,
+                    }}
+                    primary={'Filmes'}
+                  />
+                </ListItem>
+                <ListItem button classes={{ root: classes.listItem }}>
+                  <ListItemIcon>
+                    <AddCircle />
+                  </ListItemIcon>
+                  <ListItemText
+                    classes={{
+                      primary: classes.listItemText,
+                    }}
+                    primary={'Notícias'}
+                  />
+                </ListItem>
+                <ListItem button classes={{ root: classes.listItem }}>
+                  <ListItemIcon>
+                    <AddCircle />
+                  </ListItemIcon>
+                  <ListItemText
+                    classes={{
+                      primary: classes.listItemText,
+                    }}
+                    primary={'Ao vivo'}
+                  />
+                </ListItem>
+                <ListItem button classes={{ root: classes.listItem }}>
+                  <ListItemIcon>
+                    <AddCircle />
+                  </ListItemIcon>
+                  <ListItemText
+                    classes={{
+                      primary: classes.listItemText,
+                    }}
+                    primary={'Destaques'}
+                  />
+                </ListItem>
+                <ListItem button classes={{ root: classes.listItem }}>
+                  <ListItemIcon>
+                    <AddCircle />
+                  </ListItemIcon>
+                  <ListItemText
+                    classes={{
+                      primary: classes.listItemText,
+                    }}
+                    primary={'Videos 360'}
+                  />
+                </ListItem>
+              </List>
+              <Divider />
+
       </Drawer>
 
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
@@ -321,3 +428,5 @@ export default function MiniDrawer() {
     </Box>
   );
 }
+
+export default MiniDrawer;
