@@ -215,16 +215,6 @@ export default function MiniDrawer() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        {/* <List>
-          {['Inicio', 'Explorar', 'Inscrições', 'Biblioteca', 'Histórico', 'Seus Vídeos', 'Assitir mais tarde', 'Vídeos marcados como Gostei'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <HomeIcon /> : <ExploreIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List> */}
 
         <List>
             <ListItem>
@@ -303,15 +293,26 @@ export default function MiniDrawer() {
             <ListItem>
               <ListItemIcon>
                 <ThumbUpIcon />
-              </ListItemIcon>Vídeos marcados como gostei
+              </ListItemIcon>Vídeos marcados <br/>como gostei
               <ListItemText/>
             </ListItem>
         </List>
+        <Divider />
+        <Box p={4}>
+          <Typography>
+            Faça login para curtir seus <br /> vídeos, comentar e <br />se divertir
+          </Typography>
+          <Box mt={2}>
+            <Button
+              variant='outlined'
+              color='secondary'
+              startIcon={<AccountCircleIcon />}
+            >Fazer login</Button>
 
-        <Divider>
-          
-        </Divider>
-
+          </Box>
+        </Box>
+        <Divider />
+        
       </Drawer>
 
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
