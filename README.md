@@ -19,4 +19,4 @@ Lembrete: Certifique-se de adicionar as fonts no html como link que o material u
 
 <h1 align='center'>Main Screen</h1>
 
-<p align='center'><img src='client/public/assets/clone-youtube.png' /> </p>
+<p align='center'><img src='/assets/clone-youtube.png'  /> </p>
