@@ -14,3 +14,9 @@ Lembrete: Certifique-se de adicionar as fonts no html como link que o material u
 4. `npm install @mui/icons-material`
 
 5. `npm install @material-ui/core`
+
+## A aplicação ficou responsiva para todos os tamanhos de tela (Ainda há alguns pequenos ajustes, também inserir um botão a mais com troca de tema escuro e claro apenas para exercitar)
+
+<h1 align='center'>Main Screen</h1>
+
+<p align='center'><img src='client/public/assets/clone-youtube.png' /> </p>
