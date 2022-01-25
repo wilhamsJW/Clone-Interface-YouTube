@@ -24,4 +24,4 @@ Lembrete: Certifique-se de adicionar as fonts no html como link que o material u
 <p align='center'><img src='client/public/assets/clone-youtube-menu.png' width="600px"> </p>
 
 <h1 align='center'>Main Screen Mobile</h1>
-<p align='center'><img src='client/public/assets/clone-youtube-mobile.png' width="600px"> </p>
+<p align='center'><img src='client/public/assets/clone-youtube-mobile.png' width="300px"> </p>
