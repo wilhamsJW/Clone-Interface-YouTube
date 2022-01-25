@@ -20,6 +20,6 @@ Lembrete: Certifique-se de adicionar as fonts no html como link que o material u
 <h1 align='center'>Main Screen</h1>
 <p align='center'><img src='client/public/assets/clone-youtube.png' width="600px"> </p>
 
-<h1 align='center'>Menu <h4>(Ficou um pouco diferente do original)</h4></h1>
+<h1 align='center'>Menu <h4 align='center'>(Ficou um pouco diferente do original)</h4></h1>
 <p align='center'><img src='client/public/assets/clone-youtube-menu.png' width="600px"> </p>
 
