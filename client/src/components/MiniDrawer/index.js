@@ -15,8 +15,6 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 
 import {
   makeStyles,
@@ -24,6 +22,7 @@ import {
   Button,
   IconButton,
   Grid,
+  Hidden,
 } from "@material-ui/core";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import VideoCallIcon from "@mui/icons-material/VideoCall";
@@ -41,6 +40,8 @@ import HistoryToggleOffIcon from "@mui/icons-material/HistoryToggleOff";
 import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import AddCircle from "@mui/icons-material/AddCircle";
 import ListSubheader from "@mui/material/ListSubheader";
+import { Switch } from "@mui/material";
+
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -137,7 +138,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function MiniDrawer() {
+function MiniDrawer({ darkMode, setDarkMode }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -151,7 +152,6 @@ function MiniDrawer() {
 
   // Aqui estamos instanciando a const usestyles para podermos usar ela abaixo
   const classes = useStyles();
-  // const theme = useTheme();
 
   const videos = [
     {
@@ -253,9 +253,23 @@ function MiniDrawer() {
             <MenuIcon />
           </IconButton>
 
-          <img src="/assets/preto.png" alt="logo" className={classes.logo} />
+          <img
+            src={
+              theme.palette.type === "dark"
+                ? "/assets/branca.png"
+                : "/assets/preto.png"
+            }
+            alt="logo"
+            className={classes.logo}
+          />
           {/* Esta div está servindo para alinhar os dados do menu, para que fique uns do lado direito e outros esquerdo, veja como ela foi definida pela class */}
           <div className={classes.grow} />
+
+          <Switch
+            value={darkMode}
+            // onChange={() => setDarkMode(darkMode ? false : true)} {/** Pode ser assim ou abaixo */} 
+            onChange={() => setDarkMode(!darkMode)}
+          ></Switch>
 
           <IconButton
             className={classes.icons}
@@ -295,231 +309,233 @@ function MiniDrawer() {
       </AppBar>
 
       <Box display="flex">
-        <Drawer variant="permanent" open={open}>
-          <DrawerHeader>
-            <IconButton onClick={handleDrawerClose}>
-              {theme.direction === "rtl" ? (
-                <ChevronRightIcon />
-              ) : (
-                <ChevronLeftIcon />
-              )}
-            </IconButton>
-          </DrawerHeader>
-          <Divider />
+        <Hidden>
+          <Drawer variant="permanent" open={open}>
+            <DrawerHeader>
+              <IconButton onClick={handleDrawerClose}>
+                {theme.direction === "rtl" ? (
+                  <ChevronRightIcon />
+                ) : (
+                  <ChevronLeftIcon />
+                )}
+              </IconButton>
+            </DrawerHeader>
+            <Divider />
 
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <HomeIcon />
-              </ListItemIcon>
-              Início
-              <ListItemText />
-            </ListItem>
-          </List>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <HomeIcon />
+                </ListItemIcon>
+                Início
+                <ListItemText />
+              </ListItem>
+            </List>
 
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <WhatshotIcon />
-              </ListItemIcon>
-              Em Alta
-              <ListItemText />
-            </ListItem>
-          </List>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <WhatshotIcon />
+                </ListItemIcon>
+                Em Alta
+                <ListItemText />
+              </ListItem>
+            </List>
 
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <ExploreIcon />
-              </ListItemIcon>
-              Explorar
-              <ListItemText />
-            </ListItem>
-          </List>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <ExploreIcon />
+                </ListItemIcon>
+                Explorar
+                <ListItemText />
+              </ListItem>
+            </List>
 
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <SubscriptionsIcon />
-              </ListItemIcon>
-              Inscrições
-              <ListItemText />
-            </ListItem>
-          </List>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <SubscriptionsIcon />
+                </ListItemIcon>
+                Inscrições
+                <ListItemText />
+              </ListItem>
+            </List>
 
-          <Divider />
+            <Divider />
 
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <VideoLibraryIcon />
-              </ListItemIcon>
-              Biblioteca
-              <ListItemText />
-            </ListItem>
-          </List>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <VideoLibraryIcon />
+                </ListItemIcon>
+                Biblioteca
+                <ListItemText />
+              </ListItem>
+            </List>
 
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <HistoryIcon />
-              </ListItemIcon>
-              Histórico
-              <ListItemText />
-            </ListItem>
-          </List>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <HistoryIcon />
+                </ListItemIcon>
+                Histórico
+                <ListItemText />
+              </ListItem>
+            </List>
 
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <OndemandVideoIcon />
-              </ListItemIcon>
-              Seus Vídeos
-              <ListItemText />
-            </ListItem>
-          </List>
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <HistoryToggleOffIcon />
-              </ListItemIcon>
-              Assitir mais tarde
-              <ListItemText />
-            </ListItem>
-          </List>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <OndemandVideoIcon />
+                </ListItemIcon>
+                Seus Vídeos
+                <ListItemText />
+              </ListItem>
+            </List>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <HistoryToggleOffIcon />
+                </ListItemIcon>
+                Assitir mais tarde
+                <ListItemText />
+              </ListItem>
+            </List>
 
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <ThumbUpIcon />
-              </ListItemIcon>
-              Vídeos marcados <br />
-              como gostei
-              <ListItemText />
-            </ListItem>
-          </List>
-          <Divider />
-          <Box p={4}>
-            <Typography>
-              Faça login para curtir seus <br /> vídeos, comentar e <br />
-              se divertir
-            </Typography>
-            <Box mt={2}>
-              <Button
-                variant="outlined"
-                color="secondary"
-                startIcon={<AccountCircleIcon />}
-              >
-                Fazer login
-              </Button>
+            <List>
+              <ListItem>
+                <ListItemIcon>
+                  <ThumbUpIcon />
+                </ListItemIcon>
+                Vídeos marcados <br />
+                como gostei
+                <ListItemText />
+              </ListItem>
+            </List>
+            <Divider />
+            <Box p={4}>
+              <Typography>
+                Faça login para curtir seus <br /> vídeos, comentar e <br />
+                se divertir
+              </Typography>
+              <Box mt={2}>
+                <Button
+                  variant="outlined"
+                  color="secondary"
+                  startIcon={<AccountCircleIcon />}
+                >
+                  Fazer login
+                </Button>
+              </Box>
             </Box>
-          </Box>
-          <Divider />
+            <Divider />
 
-          <List
-            component="nav"
-            aria-labelledby="nested-list-subheader"
-            subheader={
-              <ListSubheader
-                component="div"
-                id="nested-list-subheader"
-                className={classes.subheader}
-              >
-                O Melhor do youtube
-              </ListSubheader>
-            }
-          >
-            <ListItem button classes={{ root: classes.listItem }}>
-              <ListItemIcon>
-                <AddCircle />
-              </ListItemIcon>
-              <ListItemText
-                classes={{
-                  primary: classes.listItemText,
-                }}
-                primary={"Música"}
-              />
-            </ListItem>
-            <ListItem button classes={{ root: classes.listItem }}>
-              <ListItemIcon>
-                <AddCircle />
-              </ListItemIcon>
-              <ListItemText
-                classes={{
-                  primary: classes.listItemText,
-                }}
-                primary={"Esportes"}
-              />
-            </ListItem>
-            <ListItem button classes={{ root: classes.listItem }}>
-              <ListItemIcon>
-                <AddCircle />
-              </ListItemIcon>
-              <ListItemText
-                classes={{
-                  primary: classes.listItemText,
-                }}
-                primary={"Jogos"}
-              />
-            </ListItem>
-            <ListItem button classes={{ root: classes.listItem }}>
-              <ListItemIcon>
-                <AddCircle />
-              </ListItemIcon>
-              <ListItemText
-                classes={{
-                  primary: classes.listItemText,
-                }}
-                primary={"Filmes"}
-              />
-            </ListItem>
-            <ListItem button classes={{ root: classes.listItem }}>
-              <ListItemIcon>
-                <AddCircle />
-              </ListItemIcon>
-              <ListItemText
-                classes={{
-                  primary: classes.listItemText,
-                }}
-                primary={"Notícias"}
-              />
-            </ListItem>
-            <ListItem button classes={{ root: classes.listItem }}>
-              <ListItemIcon>
-                <AddCircle />
-              </ListItemIcon>
-              <ListItemText
-                classes={{
-                  primary: classes.listItemText,
-                }}
-                primary={"Ao vivo"}
-              />
-            </ListItem>
-            <ListItem button classes={{ root: classes.listItem }}>
-              <ListItemIcon>
-                <AddCircle />
-              </ListItemIcon>
-              <ListItemText
-                classes={{
-                  primary: classes.listItemText,
-                }}
-                primary={"Destaques"}
-              />
-            </ListItem>
-            <ListItem button classes={{ root: classes.listItem }}>
-              <ListItemIcon>
-                <AddCircle />
-              </ListItemIcon>
-              <ListItemText
-                classes={{
-                  primary: classes.listItemText,
-                }}
-                primary={"Videos 360"}
-              />
-            </ListItem>
-          </List>
-          <Divider />
-        </Drawer>
+            <List
+              component="nav"
+              aria-labelledby="nested-list-subheader"
+              subheader={
+                <ListSubheader
+                  component="div"
+                  id="nested-list-subheader"
+                  className={classes.subheader}
+                >
+                  O Melhor do youtube
+                </ListSubheader>
+              }
+            >
+              <ListItem button classes={{ root: classes.listItem }}>
+                <ListItemIcon>
+                  <AddCircle />
+                </ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.listItemText,
+                  }}
+                  primary={"Música"}
+                />
+              </ListItem>
+              <ListItem button classes={{ root: classes.listItem }}>
+                <ListItemIcon>
+                  <AddCircle />
+                </ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.listItemText,
+                  }}
+                  primary={"Esportes"}
+                />
+              </ListItem>
+              <ListItem button classes={{ root: classes.listItem }}>
+                <ListItemIcon>
+                  <AddCircle />
+                </ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.listItemText,
+                  }}
+                  primary={"Jogos"}
+                />
+              </ListItem>
+              <ListItem button classes={{ root: classes.listItem }}>
+                <ListItemIcon>
+                  <AddCircle />
+                </ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.listItemText,
+                  }}
+                  primary={"Filmes"}
+                />
+              </ListItem>
+              <ListItem button classes={{ root: classes.listItem }}>
+                <ListItemIcon>
+                  <AddCircle />
+                </ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.listItemText,
+                  }}
+                  primary={"Notícias"}
+                />
+              </ListItem>
+              <ListItem button classes={{ root: classes.listItem }}>
+                <ListItemIcon>
+                  <AddCircle />
+                </ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.listItemText,
+                  }}
+                  primary={"Ao vivo"}
+                />
+              </ListItem>
+              <ListItem button classes={{ root: classes.listItem }}>
+                <ListItemIcon>
+                  <AddCircle />
+                </ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.listItemText,
+                  }}
+                  primary={"Destaques"}
+                />
+              </ListItem>
+              <ListItem button classes={{ root: classes.listItem }}>
+                <ListItemIcon>
+                  <AddCircle />
+                </ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.listItemText,
+                  }}
+                  primary={"Videos 360"}
+                />
+              </ListItem>
+            </List>
+            <Divider />
+          </Drawer>
+        </Hidden>
 
         <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <DrawerHeader />
@@ -534,8 +550,9 @@ function MiniDrawer() {
           >
             Recomendado
           </Typography>
-
-          <Grid container spacing={4}> {/** spacing={4} -> serve como grid-gap dando distancia entre uma grid e outra */}
+          <Grid container spacing={4}>
+            {" "}
+            {/** spacing={4} -> serve como grid-gap dando distancia entre uma grid e outra */}
             {videos.map((item, index) => (
               <Grid item lg={3} md={4} sm={6} xs={12}>
                 <Box>
@@ -545,7 +562,6 @@ function MiniDrawer() {
                     src={item.thumb}
                   />
                   <Box>
-
                     <Typography
                       style={{ fontWeight: 600 }}
                       gutterBottom
