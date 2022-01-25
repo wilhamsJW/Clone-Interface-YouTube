@@ -6,6 +6,7 @@ import {
   Toolbar,
   Button,
   IconButton,
+  Box
 } from "@material-ui/core";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -98,6 +99,10 @@ function Home() {
       </AppBar>
 
       <MiniDrawer />
+
+      <Box p={4}>
+        
+      </Box>
 
     </div>
   );

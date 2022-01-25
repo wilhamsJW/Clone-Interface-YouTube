@@ -35,6 +35,7 @@ import HistoryToggleOffIcon from '@mui/icons-material/HistoryToggleOff';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import AddCircle from '@mui/icons-material/AddCircle';
 import ListSubheader from '@mui/material/ListSubheader';
+import { typography } from "@mui/system";
 
 const drawerWidth = 240;
 
@@ -207,6 +208,7 @@ function MiniDrawer() {
         </Toolbar>
       </AppBar>
 
+      <Box display="flex">     
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
@@ -425,6 +427,22 @@ function MiniDrawer() {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
       </Box>
+
+      <Box p={3}>
+        <Toolbar /> {/** Toolbar dá um espaçamento */}
+        <Typography
+          variant='h5'
+          color='textPrimary'
+          style={{ fontWeight: 600 }}
+        >
+           Recomendado       
+        </Typography>
+
+                    
+
+      </Box>
+      </Box> 
+
     </Box>
   );
 }
