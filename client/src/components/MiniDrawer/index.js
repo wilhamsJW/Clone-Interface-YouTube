@@ -18,7 +18,13 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 
-import { makeStyles, Toolbar, Button, IconButton, Grid } from "@material-ui/core";
+import {
+  makeStyles,
+  Toolbar,
+  Button,
+  IconButton,
+  Grid,
+} from "@material-ui/core";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import VideoCallIcon from "@mui/icons-material/VideoCall";
 import MoreVert from "@mui/icons-material/MoreVert";
@@ -28,13 +34,13 @@ import HomeIcon from "@mui/icons-material/Home";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 import ExploreIcon from "@mui/icons-material/Explore";
-import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
-import HistoryIcon from '@mui/icons-material/History';
-import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
-import HistoryToggleOffIcon from '@mui/icons-material/HistoryToggleOff';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import AddCircle from '@mui/icons-material/AddCircle';
-import ListSubheader from '@mui/material/ListSubheader';
+import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
+import HistoryIcon from "@mui/icons-material/History";
+import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
+import HistoryToggleOffIcon from "@mui/icons-material/HistoryToggleOff";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import AddCircle from "@mui/icons-material/AddCircle";
+import ListSubheader from "@mui/material/ListSubheader";
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -151,81 +157,81 @@ function MiniDrawer() {
     {
       id: 1,
       title:
-        'FEED DO USUÁRIO | Criando uma Rede Social com React.js e .NET Core #29',
-      channel: 'Lucas Nhimi',
-      views: '11 mi de visualizações',
-      date: 'há 1 semana',
-      avatar: '/images/avatar.jpeg',
-      thumb: '/images/thumb1.png',
+        "FEED DO USUÁRIO | Criando uma Rede Social com React.js e .NET Core #29",
+      channel: "Lucas Nhimi",
+      views: "11 mi de visualizações",
+      date: "há 1 semana",
+      avatar: "/assets/avatar.jpeg",
+      thumb: "/assets/thumb1.png",
     },
     {
       id: 2,
       title:
-        'COMO MELHORAR SEU CODIGO JAVASCRIPT (ESLINT + PRETTIER + EDITORCONFIG) | Dicas e Truques #02',
-      channel: 'Lucas Nhimi',
-      views: '957 mil visualizações',
-      date: 'há 1 semana',
-      avatar: '/images/avatar.jpeg',
-      thumb: '/images/thumb2.png',
+        "COMO MELHORAR SEU CODIGO JAVASCRIPT (ESLINT + PRETTIER + EDITORCONFIG) | Dicas e Truques #02",
+      channel: "Lucas Nhimi",
+      views: "957 mil visualizações",
+      date: "há 1 semana",
+      avatar: "/assets/avatar.jpeg",
+      thumb: "/assets/thumb2.png",
     },
     {
       id: 3,
       title:
-        'CONTEXT API NO EDITOR DE POST | Criando uma Rede Social com React.js e .NET Core #27',
-      channel: 'Lucas Nhimi',
-      views: '106 mil visualizações',
-      date: 'há 1 semana',
-      avatar: '/images/avatar.jpeg',
-      thumb: '/images/thumb3.png',
+        "CONTEXT API NO EDITOR DE POST | Criando uma Rede Social com React.js e .NET Core #27",
+      channel: "Lucas Nhimi",
+      views: "106 mil visualizações",
+      date: "há 1 semana",
+      avatar: "/assets/avatar.jpeg",
+      thumb: "/assets/thumb3.png",
     },
     {
       id: 4,
       title:
-        'CONTEXT API NO EDITOR DE POST | Criando uma Rede Social com React.js e .NET Core #27',
-      channel: 'Lucas Nhimi',
-      views: '5,6 mi de visualizações',
-      date: 'há 1 semana',
-      avatar: '/images/avatar.jpeg',
-      thumb: '/images/thumb4.png',
+        "CONTEXT API NO EDITOR DE POST | Criando uma Rede Social com React.js e .NET Core #27",
+      channel: "Lucas Nhimi",
+      views: "5,6 mi de visualizações",
+      date: "há 1 semana",
+      avatar: "/assets/avatar.jpeg",
+      thumb: "/assets/thumb4.png",
     },
     {
       id: 5,
       title:
-        'EDITOR DE POST COM MARKDOWN 2 | Criando uma Rede Social com React.js e .NET Core #26',
-      channel: 'Lucas Nhimi',
-      views: '2,2 mi de visualizações',
-      date: 'há 1 semana',
-      avatar: '/images/avatar.jpeg',
-      thumb: '/images/thumb5.png',
+        "EDITOR DE POST COM MARKDOWN 2 | Criando uma Rede Social com React.js e .NET Core #26",
+      channel: "Lucas Nhimi",
+      views: "2,2 mi de visualizações",
+      date: "há 1 semana",
+      avatar: "/assets/avatar.jpeg",
+      thumb: "/assets/thumb5.png",
     },
     {
       id: 6,
-      title: 'COMO MIGRAR PARA REACT HOOKS | Dicas e Truques #01',
-      channel: 'Lucas Nhimi',
-      views: '233 mil visualizações',
-      date: 'há 1 semana',
-      avatar: '/images/avatar.jpeg',
-      thumb: '/images/thumb6.png',
+      title: "COMO MIGRAR PARA REACT HOOKS | Dicas e Truques #01",
+      channel: "Lucas Nhimi",
+      views: "233 mil visualizações",
+      date: "há 1 semana",
+      avatar: "/assets/avatar.jpeg",
+      thumb: "/assets/thumb6.png",
     },
     {
       id: 7,
       title:
-        'PRÉ-REQUISITOS | Criando uma Rede Social com React.js e .NET Core #01',
-      channel: 'Lucas Nhimi',
-      views: '118 mil visualizações',
-      date: 'há 1 semana',
-      avatar: '/images/avatar.jpeg',
-      thumb: '/images/thumb7.png',
+        "PRÉ-REQUISITOS | Criando uma Rede Social com React.js e .NET Core #01",
+      channel: "Lucas Nhimi",
+      views: "118 mil visualizações",
+      date: "há 1 semana",
+      avatar: "/assets/avatar.jpeg",
+      thumb: "/assets/thumb7.png",
     },
     {
       id: 8,
       title:
-        'GIT E GITHUB | Criando uma Rede Social com React.js e .NET Core #04',
-      channel: 'Lucas Nhimi',
-      views: '1,9 mi de visualizações',
-      date: 'há 1 semana',
-      avatar: '/images/avatar.jpeg',
-      thumb: '/images/thumb8.png',
+        "GIT E GITHUB | Criando uma Rede Social com React.js e .NET Core #04",
+      channel: "Lucas Nhimi",
+      views: "1,9 mi de visualizações",
+      date: "há 1 semana",
+      avatar: "/assets/avatar.jpeg",
+      thumb: "/assets/thumb8.png",
     },
   ];
 
@@ -288,245 +294,285 @@ function MiniDrawer() {
         </Toolbar>
       </AppBar>
 
-      <Box display="flex">     
-      <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "rtl" ? (
-              <ChevronRightIcon />
-            ) : (
-              <ChevronLeftIcon />
-            )}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
+      <Box display="flex">
+        <Drawer variant="permanent" open={open}>
+          <DrawerHeader>
+            <IconButton onClick={handleDrawerClose}>
+              {theme.direction === "rtl" ? (
+                <ChevronRightIcon />
+              ) : (
+                <ChevronLeftIcon />
+              )}
+            </IconButton>
+          </DrawerHeader>
+          <Divider />
 
-        <List>
+          <List>
             <ListItem>
               <ListItemIcon>
                 <HomeIcon />
-              </ListItemIcon>Início
-              <ListItemText/>
+              </ListItemIcon>
+              Início
+              <ListItemText />
             </ListItem>
-        </List>
+          </List>
 
-        <List>
+          <List>
             <ListItem>
               <ListItemIcon>
                 <WhatshotIcon />
-              </ListItemIcon>Em Alta
-              <ListItemText/>
+              </ListItemIcon>
+              Em Alta
+              <ListItemText />
             </ListItem>
-        </List>
+          </List>
 
-        <List>
+          <List>
             <ListItem>
               <ListItemIcon>
                 <ExploreIcon />
-              </ListItemIcon>Explorar
-              <ListItemText/>
+              </ListItemIcon>
+              Explorar
+              <ListItemText />
             </ListItem>
-        </List>
+          </List>
 
-        <List>
+          <List>
             <ListItem>
               <ListItemIcon>
                 <SubscriptionsIcon />
-              </ListItemIcon>Inscrições
-              <ListItemText/>
+              </ListItemIcon>
+              Inscrições
+              <ListItemText />
             </ListItem>
-        </List>
+          </List>
 
-        <Divider />
-        
-        <List>
+          <Divider />
+
+          <List>
             <ListItem>
               <ListItemIcon>
                 <VideoLibraryIcon />
-              </ListItemIcon>Biblioteca
-              <ListItemText/>
+              </ListItemIcon>
+              Biblioteca
+              <ListItemText />
             </ListItem>
-        </List>
+          </List>
 
-        <List>
+          <List>
             <ListItem>
               <ListItemIcon>
                 <HistoryIcon />
-              </ListItemIcon>Histórico
-              <ListItemText/>
+              </ListItemIcon>
+              Histórico
+              <ListItemText />
             </ListItem>
-        </List>
+          </List>
 
-        <List>
+          <List>
             <ListItem>
               <ListItemIcon>
                 <OndemandVideoIcon />
-              </ListItemIcon>Seus Vídeos
-              <ListItemText/>
+              </ListItemIcon>
+              Seus Vídeos
+              <ListItemText />
             </ListItem>
-        </List>
-        <List>
+          </List>
+          <List>
             <ListItem>
               <ListItemIcon>
                 <HistoryToggleOffIcon />
-              </ListItemIcon>Assitir mais tarde
-              <ListItemText/>
+              </ListItemIcon>
+              Assitir mais tarde
+              <ListItemText />
             </ListItem>
-        </List>
+          </List>
 
-        <List>
+          <List>
             <ListItem>
               <ListItemIcon>
                 <ThumbUpIcon />
-              </ListItemIcon>Vídeos marcados <br/>como gostei
-              <ListItemText/>
+              </ListItemIcon>
+              Vídeos marcados <br />
+              como gostei
+              <ListItemText />
             </ListItem>
-        </List>
-        <Divider />
-        <Box p={4}>
-          <Typography>
-            Faça login para curtir seus <br /> vídeos, comentar e <br />se divertir
-          </Typography>
-          <Box mt={2}>
-            <Button
-              variant='outlined'
-              color='secondary'
-              startIcon={<AccountCircleIcon />}
-            >Fazer login</Button>
-
-          </Box>
-        </Box>
-        <Divider />
-
-        <List
-                component='nav'
-                aria-labelledby='nested-list-subheader'
-                subheader={
-                  <ListSubheader
-                    component='div'
-                    id='nested-list-subheader'
-                    className={classes.subheader}
-                  >
-                    O Melhor do youtube
-                  </ListSubheader>
-                }
+          </List>
+          <Divider />
+          <Box p={4}>
+            <Typography>
+              Faça login para curtir seus <br /> vídeos, comentar e <br />
+              se divertir
+            </Typography>
+            <Box mt={2}>
+              <Button
+                variant="outlined"
+                color="secondary"
+                startIcon={<AccountCircleIcon />}
               >
-                <ListItem button classes={{ root: classes.listItem }}>
-                  <ListItemIcon>
-                    <AddCircle />
-                  </ListItemIcon>
-                  <ListItemText
-                    classes={{
-                      primary: classes.listItemText,
-                    }}
-                    primary={'Música'}
-                  />
-                </ListItem>
-                <ListItem button classes={{ root: classes.listItem }}>
-                  <ListItemIcon>
-                    <AddCircle />
-                  </ListItemIcon>
-                  <ListItemText
-                    classes={{
-                      primary: classes.listItemText,
-                    }}
-                    primary={'Esportes'}
-                  />
-                </ListItem>
-                <ListItem button classes={{ root: classes.listItem }}>
-                  <ListItemIcon>
-                    <AddCircle />
-                  </ListItemIcon>
-                  <ListItemText
-                    classes={{
-                      primary: classes.listItemText,
-                    }}
-                    primary={'Jogos'}
-                  />
-                </ListItem>
-                <ListItem button classes={{ root: classes.listItem }}>
-                  <ListItemIcon>
-                    <AddCircle />
-                  </ListItemIcon>
-                  <ListItemText
-                    classes={{
-                      primary: classes.listItemText,
-                    }}
-                    primary={'Filmes'}
-                  />
-                </ListItem>
-                <ListItem button classes={{ root: classes.listItem }}>
-                  <ListItemIcon>
-                    <AddCircle />
-                  </ListItemIcon>
-                  <ListItemText
-                    classes={{
-                      primary: classes.listItemText,
-                    }}
-                    primary={'Notícias'}
-                  />
-                </ListItem>
-                <ListItem button classes={{ root: classes.listItem }}>
-                  <ListItemIcon>
-                    <AddCircle />
-                  </ListItemIcon>
-                  <ListItemText
-                    classes={{
-                      primary: classes.listItemText,
-                    }}
-                    primary={'Ao vivo'}
-                  />
-                </ListItem>
-                <ListItem button classes={{ root: classes.listItem }}>
-                  <ListItemIcon>
-                    <AddCircle />
-                  </ListItemIcon>
-                  <ListItemText
-                    classes={{
-                      primary: classes.listItemText,
-                    }}
-                    primary={'Destaques'}
-                  />
-                </ListItem>
-                <ListItem button classes={{ root: classes.listItem }}>
-                  <ListItemIcon>
-                    <AddCircle />
-                  </ListItemIcon>
-                  <ListItemText
-                    classes={{
-                      primary: classes.listItemText,
-                    }}
-                    primary={'Videos 360'}
-                  />
-                </ListItem>
-              </List>
-              <Divider />
+                Fazer login
+              </Button>
+            </Box>
+          </Box>
+          <Divider />
 
-      </Drawer>
+          <List
+            component="nav"
+            aria-labelledby="nested-list-subheader"
+            subheader={
+              <ListSubheader
+                component="div"
+                id="nested-list-subheader"
+                className={classes.subheader}
+              >
+                O Melhor do youtube
+              </ListSubheader>
+            }
+          >
+            <ListItem button classes={{ root: classes.listItem }}>
+              <ListItemIcon>
+                <AddCircle />
+              </ListItemIcon>
+              <ListItemText
+                classes={{
+                  primary: classes.listItemText,
+                }}
+                primary={"Música"}
+              />
+            </ListItem>
+            <ListItem button classes={{ root: classes.listItem }}>
+              <ListItemIcon>
+                <AddCircle />
+              </ListItemIcon>
+              <ListItemText
+                classes={{
+                  primary: classes.listItemText,
+                }}
+                primary={"Esportes"}
+              />
+            </ListItem>
+            <ListItem button classes={{ root: classes.listItem }}>
+              <ListItemIcon>
+                <AddCircle />
+              </ListItemIcon>
+              <ListItemText
+                classes={{
+                  primary: classes.listItemText,
+                }}
+                primary={"Jogos"}
+              />
+            </ListItem>
+            <ListItem button classes={{ root: classes.listItem }}>
+              <ListItemIcon>
+                <AddCircle />
+              </ListItemIcon>
+              <ListItemText
+                classes={{
+                  primary: classes.listItemText,
+                }}
+                primary={"Filmes"}
+              />
+            </ListItem>
+            <ListItem button classes={{ root: classes.listItem }}>
+              <ListItemIcon>
+                <AddCircle />
+              </ListItemIcon>
+              <ListItemText
+                classes={{
+                  primary: classes.listItemText,
+                }}
+                primary={"Notícias"}
+              />
+            </ListItem>
+            <ListItem button classes={{ root: classes.listItem }}>
+              <ListItemIcon>
+                <AddCircle />
+              </ListItemIcon>
+              <ListItemText
+                classes={{
+                  primary: classes.listItemText,
+                }}
+                primary={"Ao vivo"}
+              />
+            </ListItem>
+            <ListItem button classes={{ root: classes.listItem }}>
+              <ListItemIcon>
+                <AddCircle />
+              </ListItemIcon>
+              <ListItemText
+                classes={{
+                  primary: classes.listItemText,
+                }}
+                primary={"Destaques"}
+              />
+            </ListItem>
+            <ListItem button classes={{ root: classes.listItem }}>
+              <ListItemIcon>
+                <AddCircle />
+              </ListItemIcon>
+              <ListItemText
+                classes={{
+                  primary: classes.listItemText,
+                }}
+                primary={"Videos 360"}
+              />
+            </ListItem>
+          </List>
+          <Divider />
+        </Drawer>
 
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-        <DrawerHeader />
+        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+          <DrawerHeader />
+        </Box>
+
+        <Box p={3}>
+          <Toolbar /> {/** Toolbar dá um espaçamento */}
+          <Typography
+            variant="h5"
+            color="textPrimary"
+            style={{ fontWeight: 600 }}
+          >
+            Recomendado
+          </Typography>
+
+          <Grid container spacing={4}> {/** spacing={4} -> serve como grid-gap dando distancia entre uma grid e outra */}
+            {videos.map((item, index) => (
+              <Grid item lg={3} md={4} sm={6} xs={12}>
+                <Box>
+                  <img
+                    style={{ width: "100%" }}
+                    alt={item.title}
+                    src={item.thumb}
+                  />
+                  <Box>
+
+                    <Typography
+                      style={{ fontWeight: 600 }}
+                      gutterBottom
+                      variant="body1"
+                      color="textPrimary"
+                    >
+                      {item.title}
+                    </Typography>
+
+                    <Typography
+                      display="block"
+                      variant="body2"
+                      color="textSecondary"
+                    >
+                      {item.channel}
+                    </Typography>
+
+                    <Typography variant="body2" color="textSecondary">
+                      {`${item.views} • ${item.date}`}
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
       </Box>
-
-      <Box p={3}>
-        <Toolbar /> {/** Toolbar dá um espaçamento */}
-        <Typography
-          variant='h5'
-          color='textPrimary'
-          style={{ fontWeight: 600 }}
-        >
-           Recomendado       
-        </Typography>
-
-        <Grid container>
-          <Grid item lg={4}>x</Grid>
-          <Grid item lg={4}>x</Grid>
-          <Grid item lg={4}>x</Grid>
-        </Grid>            
-
-      </Box>
-      </Box> 
-
     </Box>
   );
 }
